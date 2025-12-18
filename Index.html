@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+
+  <!-- Responsive -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Element Finder | Glassmorphism Edition</title>
+
+  <!-- Icons -->
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#720cad" />
+
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- Background -->
+  <div class="glass-bg"></div>
+
+  <main class="container">
+
+    <!-- Header -->
+    <header>
+      <h1>
+        <i class="fas fa-atom"></i>
+        Element Finder
+      </h1>
+    </header>
+
+    <!-- Search -->
+    <section class="search-container">
+      <div class="input-group">
+        <i class="fas fa-search search-icon"></i>
+        <input
+          type="text"
+          id="search"
+          placeholder="Search by name, symbol, or number..."/>
+          <span id="clear-search" class="clear-search">&times;</span>
+      </div>
+    </section>
+
+    <!-- Filter -->
+    <section class="filter-container">
+      <label>Filter by Category</label>
+
+      <!-- Hidden input for JS compatibility -->
+      <input type="hidden" id="filter-category" value="" />
+
+      <div class="custom-select" id="categorySelect">
+        <div class="selected">All Elements</div>
+        <div class="options">
+          <div data-value="">All Elements</div>
+          <div data-value="alkali-metal">Alkali Metals</div>
+          <div data-value="alkaline-earth-metal">Alkaline Earth Metals</div>
+          <div data-value="transition-metal">Transition Metals</div>
+          <div data-value="post-transition-metal">Post-Transition Metals</div>
+          <div data-value="metalloid">Metalloids</div>
+          <div data-value="reactive-nonmetal">Reactive Nonmetals</div>
+          <div data-value="noble-gas">Noble Gases</div>
+          <div data-value="lanthanide">Lanthanides</div>
+          <div data-value="actinide">Actinides</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Results -->
+    <section id="result-container"></section>
+
+    <!-- Compare Bar -->
+    <section id="compare-bar">
+      <div id="compare-slots">
+        <span class="compare-msg">Select 2 elements to compare</span>
+      </div>
+
+      <div class="compare-actions">
+        <button id="compare-btn" disabled>Compare Now</button>
+        <button id="clear-compare">Clear</button>
+      </div>
+    </section>
+
+    
+
+  </main>
+
+  <script>
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+      navigator.serviceWorker.register("service-worker.js");
+    });
+  }
+</script>
+
+  <script src="script.js"></script>
+</body>
+</html>
