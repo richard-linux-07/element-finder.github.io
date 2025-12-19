@@ -20,7 +20,7 @@ The application is fully responsive, mobile-friendly, and works as a Progressive
 - Progressive Web App (PWA)  
 
 ## 🌐 Live Demo
-👉 https://richard-linux-07.github.io/element-finder.github.io/
+👉 https://quantumweblabs.github.io/element-finder.github.io/
 
 ## 📦 Installation
 You can install the app directly from your browser using the “Install” or “Add to Home Screen” option.
