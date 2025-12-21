@@ -17,7 +17,6 @@ The application is fully responsive, mobile-friendly, and works as a Progressive
 - HTML5  
 - CSS3 (Glassmorphism, animations, responsive design)  
 - Vanilla JavaScript  
-- Progressive Web App (PWA)  
 
 ## 🌐 Live Demo
 👉 https://quantumweblabs.github.io/element-finder.github.io/
